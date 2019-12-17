@@ -8,6 +8,10 @@
 				"children": [
 					"a829471c",
 					"35f1c1a1",
+					"4110-7d42-363f-41ad",
+					"7d47-5925-6cba-65f8",
+					"a886-d7ee-07c4-2ded",
+					"e3ad-d311-f741-f954",
 					"ce08-3fd4-03e6-4438",
 					"9e3d-3c8c-de2c-aad8"
 				],
@@ -61,10 +65,82 @@
 			}
 		},
 		{
+			"className": ".sf-textBox",
+			"id": "4110-7d42-363f-41ad",
+			"props": {
+				"autoHeight": 19.672131147540984,
+				"children": [],
+				"name": "textBox2",
+				"parent": "7761adc8",
+				"text": "  textBox2",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"autoHeight": 19.672131147540984,
+				"text": "  textBox2",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-textBox",
+			"id": "7d47-5925-6cba-65f8",
+			"props": {
+				"autoHeight": 19.672131147540984,
+				"children": [],
+				"name": "textBox3",
+				"parent": "7761adc8",
+				"text": "  textBox3",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"autoHeight": 19.672131147540984,
+				"text": "  textBox3",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-textBox",
+			"id": "a886-d7ee-07c4-2ded",
+			"props": {
+				"autoHeight": 19.672131147540984,
+				"children": [],
+				"name": "textBox4",
+				"parent": "7761adc8",
+				"text": "  textBox4",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"autoHeight": 19.672131147540984,
+				"text": "  textBox4",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-textBox",
+			"id": "e3ad-d311-f741-f954",
+			"props": {
+				"autoHeight": 19.672131147540984,
+				"children": [],
+				"name": "textBox5",
+				"parent": "7761adc8",
+				"text": "  textBox5",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"autoHeight": 19.672131147540984,
+				"text": "  textBox5",
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".label",
 			"id": "ce08-3fd4-03e6-4438",
 			"props": {
-				"autoHeight": 76.66666666666667,
+				"autoHeight": 36.0655737704918,
 				"children": [],
 				"name": "lbl",
 				"parent": "7761adc8",
@@ -73,7 +149,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 76.66666666666667,
+				"autoHeight": 36.0655737704918,
 				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"flexProps": {
 					"marginLeft": 20,
@@ -103,7 +179,7 @@
 			"className": ".button",
 			"id": "9e3d-3c8c-de2c-aad8",
 			"props": {
-				"autoHeight": 51.11111111111111,
+				"autoHeight": 19.672131147540984,
 				"children": [],
 				"name": "btnSayHello",
 				"parent": "7761adc8",
@@ -112,7 +188,7 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 51.11111111111111,
+				"autoHeight": 19.672131147540984,
 				"flexProps": {
 					"alignSelf": "AUTO",
 					"positionType": "RELATIVE"

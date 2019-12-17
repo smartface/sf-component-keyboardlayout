@@ -8,6 +8,7 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
+					"8f66-2dfe-cbc3-7b22",
 					"980522a9",
 					"9e49-7873-afba-472b"
 				],
@@ -62,10 +63,28 @@
 			}
 		},
 		{
+			"className": ".sf-textBox",
+			"id": "8f66-2dfe-cbc3-7b22",
+			"props": {
+				"autoHeight": 20.37037037037037,
+				"children": [],
+				"name": "textBox1",
+				"parent": "e891b86d",
+				"text": "  textBox1",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"autoHeight": 20.37037037037037,
+				"text": "  textBox1",
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".label",
 			"id": "980522a9",
 			"props": {
-				"autoHeight": 39.325842696629216,
+				"autoHeight": 35.18518518518518,
 				"children": [],
 				"name": "lbl",
 				"parent": "e891b86d",
@@ -74,7 +93,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 39.325842696629216,
+				"autoHeight": 35.18518518518518,
 				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"flexProps": {
 					"marginLeft": 20,
@@ -99,10 +118,10 @@
 			}
 		},
 		{
-			"className": ".button",
+			"className": ".sf-button",
 			"id": "9e49-7873-afba-472b",
 			"props": {
-				"autoHeight": 50.561797752808985,
+				"autoHeight": 20.37037037037037,
 				"children": [],
 				"name": "btnNext",
 				"parent": "e891b86d",
@@ -111,14 +130,9 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 50.561797752808985,
-				"flexProps": {
-					"alignSelf": "AUTO",
-					"positionType": "RELATIVE"
-				},
+				"autoHeight": 20.37037037037037,
 				"text": "Next Page",
-				"usePageVariable": true,
-				"width": null
+				"usePageVariable": true
 			}
 		}
 	]

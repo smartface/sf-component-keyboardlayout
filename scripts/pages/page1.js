@@ -1,6 +1,8 @@
+const Screen = require("sf-core/device/screen");
 const touch = require("sf-extension-utils/lib/touch");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch");
 const PageTitleLayout = require("components/PageTitleLayout");
+const KeyboardLayout = require("components/KeyboardLayout");
 
 const extend = require("js-base/core/extend");
 const System = require("sf-core/device/system");
@@ -46,6 +48,8 @@ function onLoad(superOnLoad) {
     if (System.OS === "Android") {
         this.headerBar.title = "";
     }
+    let keyboardLayout = new KeyboardLayout();
+    this.textBox1.ios.keyboardLayout = keyboardLayout;
 }
 
 module.exports = Page1;
