@@ -28,17 +28,17 @@
 			"imageFillType": "NORMAL",
 			"alignSelf": "AUTO",
 			".up": {
-				"image": "keyboardlayout_down.png",
-				"tintColor": "rgba(0,161,241,1)",
+				"image": "keyboardlayout_up.png",
+				"tintColor": "rgba( 0, 161, 241, 1 )",
 				".disabled": {
 					"tintColor": "rgba( 209, 209, 214, 1 )"
 				}
 			},
 			".down": {
-				"image": "keyboardlayout_up.png",
+				"image": "keyboardlayout_down.png",
 				"tintColor": "rgba( 0, 161, 241, 1 )",
 				".disabled": {
-					"tintColor": "rgba( 174, 174, 178, 1 )"
+					"tintColor": "rgba( 209, 209, 214, 1 )"
 				}
 			}
 		},

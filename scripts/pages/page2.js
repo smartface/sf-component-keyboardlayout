@@ -6,6 +6,7 @@ const componentContextPatch = require("@smartface/contx/lib/smartface/componentC
 const extend = require("js-base/core/extend");
 const Color = require("sf-core/ui/color");
 const System = require("sf-core/device/system");
+const KeyboardLayout = require("components/KeyboardLayout");
 
 // Get generated UI code
 const Page2Design = require('ui/ui_page2');
@@ -66,6 +67,8 @@ function onLoad(superOnLoad) {
         headerBar = this.parentController.headerBar;
     }
     headerBar.itemColor = Color.WHITE;
+    
+    KeyboardLayout.init([this.textBox2, this.textBox3, this.textBox4, this.textBox5]);
 }
 
 module.exports = Page2;

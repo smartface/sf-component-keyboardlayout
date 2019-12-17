@@ -70,6 +70,7 @@
 			"props": {
 				"autoHeight": 19.672131147540984,
 				"children": [],
+				"isPassword": false,
 				"name": "textBox2",
 				"parent": "7761adc8",
 				"text": "  textBox2",
@@ -78,6 +79,7 @@
 			"type": "TextBox",
 			"userProps": {
 				"autoHeight": 19.672131147540984,
+				"isPassword": false,
 				"text": "  textBox2",
 				"usePageVariable": true
 			}

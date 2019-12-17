@@ -48,8 +48,8 @@ function onLoad(superOnLoad) {
     if (System.OS === "Android") {
         this.headerBar.title = "";
     }
-    let keyboardLayout = new KeyboardLayout();
-    this.textBox1.ios.keyboardLayout = keyboardLayout;
+    KeyboardLayout.init(this.textBox1);
+    
 }
 
 module.exports = Page1;

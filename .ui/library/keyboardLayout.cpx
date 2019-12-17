@@ -23,8 +23,8 @@
 			"id": "7750-6a53-56fb-14a5",
 			"props": {
 				"children": [
-					"6e04-33a5-10c3-8aed",
-					"4183-e696-fede-6923"
+					"4183-e696-fede-6923",
+					"6e04-33a5-10c3-8aed"
 				],
 				"name": "flNavigation",
 				"parent": "130e-3031-7a3f-88da"
@@ -37,10 +37,8 @@
 		},
 		{
 			"className": ".keyboardLayout-image.up",
-			"id": "6e04-33a5-10c3-8aed",
+			"id": "4183-e696-fede-6923",
 			"props": {
-				"autoHeight": 13.114754098360656,
-				"autoWidth": 21.311475409836067,
 				"children": [],
 				"name": "imgUp",
 				"parent": "7750-6a53-56fb-14a5",
@@ -51,15 +49,15 @@
 			},
 			"type": "ImageView",
 			"userProps": {
-				"autoHeight": 13.114754098360656,
-				"autoWidth": 21.311475409836067,
 				"usePageVariable": true
 			}
 		},
 		{
-			"className": ".keyboardLayout-image.down.disabled",
-			"id": "4183-e696-fede-6923",
+			"className": ".keyboardLayout-image.down",
+			"id": "6e04-33a5-10c3-8aed",
 			"props": {
+				"autoHeight": 13.114754098360656,
+				"autoWidth": 21.311475409836067,
 				"children": [],
 				"name": "imgDown",
 				"parent": "7750-6a53-56fb-14a5",
@@ -70,6 +68,8 @@
 			},
 			"type": "ImageView",
 			"userProps": {
+				"autoHeight": 13.114754098360656,
+				"autoWidth": 21.311475409836067,
 				"usePageVariable": true
 			}
 		},
