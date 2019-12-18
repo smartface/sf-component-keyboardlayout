@@ -1,0 +1,100 @@
+{
+	"components": [
+		{
+			"className": ".keyboardLayout",
+			"id": "ce17-847e-9acd-19e8",
+			"initialized": true,
+			"props": {
+				"children": [
+					"7d9a-704a-893b-3134",
+					"dfe1-8425-2221-c86d"
+				],
+				"name": "keyboardlayout",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Keyboardlayout",
+				"modulePath": "keyboardlayout"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".keyboardLayout-navigation",
+			"id": "7d9a-704a-893b-3134",
+			"props": {
+				"children": [
+					"2497-3c97-7243-2fea",
+					"6fdc-df16-7d30-6aec"
+				],
+				"name": "flNavigation",
+				"parent": "ce17-847e-9acd-19e8"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".keyboardLayout-image.up",
+			"id": "2497-3c97-7243-2fea",
+			"props": {
+				"children": [],
+				"name": "imgUp",
+				"parent": "7d9a-704a-893b-3134",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".keyboardLayout-image.down",
+			"id": "6fdc-df16-7d30-6aec",
+			"props": {
+				"autoHeight": 13.114754098360656,
+				"autoWidth": 21.311475409836067,
+				"children": [],
+				"name": "imgDown",
+				"parent": "7d9a-704a-893b-3134",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 13.114754098360656,
+				"autoWidth": 21.311475409836067,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".keyboardLayout-button",
+			"id": "dfe1-8425-2221-c86d",
+			"props": {
+				"autoWidth": 41.18852459016394,
+				"children": [],
+				"name": "btnDone",
+				"parent": "ce17-847e-9acd-19e8",
+				"text": "Done",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Button",
+			"userProps": {
+				"autoWidth": 41.18852459016394,
+				"text": "Done",
+				"usePageVariable": true
+			}
+		}
+	]
+}

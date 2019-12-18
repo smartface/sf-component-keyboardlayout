@@ -1,0 +1,30 @@
+{
+	"name": "keyboardlayout",
+	"type": "library",
+	"title": "KeyboardLayout",
+	"author": "furkan.arabaci@smartface.io",
+	"description": "",
+	"themePath": "themes/keyboardlayout_style.json",
+	"resources": {
+		"images": [
+			"keyboardlayout_down",
+			"keyboardlayout_up"
+		],
+		"fonts": [
+			"SFProText"
+		],
+		"classNames": [
+			".keyboardLayout",
+			".keyboardLayout-navigation",
+			".keyboardLayout-image.up",
+			".keyboardLayout-image.down",
+			".keyboardLayout-button"
+		]
+	},
+	"dependencies": [],
+	"imagePaths": [
+		"preview/keyboardLayout.png"
+	],
+	"version": "1.0.0",
+	"readMePath": "README.md"
+}
