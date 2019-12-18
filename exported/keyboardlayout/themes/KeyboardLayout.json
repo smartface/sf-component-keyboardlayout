@@ -59,53 +59,6 @@
 			},
 			"backgroundColor": "rgba( 255, 255, 255, 0 )"
 		},
-		"paddingRight": 16,
-		"&-buttonWrapper": {
-			"height": null,
-			"width": null
-		}
-	},
-	".keyboardLayout-navigation": {
-		"backgroundColor": "rgba( 255, 255, 255, 0 )",
-		"width": 90,
-		"flexProps": {
-			"flexDirection": "ROW",
-			"justifyContent": "SPACE_AROUND",
-			"alignContent": "STRETCH",
-			"flexWrap": "NOWRAP",
-			"positionType": "RELATIVE"
-		},
-		"height": null
-	},
-	".keyboardLayout-image.up": {
-		"image": "keyboardlayout_up.png",
-		"tintColor": "rgba( 0, 161, 241, 1 )",
-		".disabled": {
-			"tintColor": "rgba( 209, 209, 214, 1 )"
-		}
-	},
-	".keyboardLayout-image.down": {
-		"image": "keyboardlayout_down.png",
-		"tintColor": "rgba( 0, 161, 241, 1 )",
-		".disabled": {
-			"tintColor": "rgba( 209, 209, 214, 1 )"
-		}
-	},
-	".keyboardLayout-button": {
-		"flexProps": {
-			"positionType": "RELATIVE",
-			"alignSelf": "AUTO"
-		},
-		"textColor": "rgba( 0, 161, 241, 1 )",
-		"height": null,
-		"textAlignment": "MIDCENTER",
-		"font": {
-			"family": "SFProText",
-			"style": "Semibold",
-			"bold": true,
-			"size": 16,
-			"italic": false
-		},
-		"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		"paddingRight": 16
 	}
 }
