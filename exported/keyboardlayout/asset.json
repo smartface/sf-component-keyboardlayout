@@ -3,8 +3,8 @@
 	"type": "library",
 	"title": "KeyboardLayout",
 	"author": "furkan.arabaci@smartface.io",
-	"description": "",
-	"themePath": "themes/keyboardlayout_style.json",
+	"description": "A template keyboard layout for iOS for ease of usage",
+	"themePath": "themes/KeyboardLayout.json",
 	"resources": {
 		"images": [
 			"keyboardlayout_down",
@@ -14,17 +14,13 @@
 			"SFProText"
 		],
 		"classNames": [
-			".keyboardLayout",
-			".keyboardLayout-navigation",
-			".keyboardLayout-image.up",
-			".keyboardLayout-image.down",
-			".keyboardLayout-button"
+			".keyboardLayout"
 		]
 	},
 	"dependencies": [],
 	"imagePaths": [
 		"preview/keyboardLayout.png"
 	],
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"readMePath": "README.md"
 }
