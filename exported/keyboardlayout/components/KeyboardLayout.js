@@ -5,7 +5,7 @@
  * @module KeyboardLayout
  * @type {Class}
  * @author Furkan Arabacı <furkan.arabaci@smartface.io>
- * @copyright Smartface 2019
+ * @copyright Smartface 2020
  */
 const pushClassNames = require("@smartface/contx/lib/styling/action/pushClassNames");
 const System = require("sf-core/device/system");
@@ -38,7 +38,9 @@ const KeyboardLayout = extend(KeyboardLayoutDesign)(
         this.toggleDisabilityofDownImage = toggleDisabilityofDownImage.bind(this);
         this.toggleVisibilityOfDownImage = toggleVisibilityOfDownImage.bind(this);
         this.toggleVisibilityOfDoneButton = toggleVisibilityOfDoneButton.bind(this);
-
+        
+        this.btnDone.text = global.lang.done;
+        
         let _onUpImageClick = () => {};
         let _onDownImageClick = () => {};
         let _onDoneButtonClick = () => {};
