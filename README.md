@@ -1,29 +1,99 @@
+<a name="module_KeyboardLayout"></a>
 
-     ____                       _    __                      _       
-    / ___| _ __ ___   __ _ _ __| |_ / _| __ _  ___ ___      (_) ___  
-    \___ \| '_ ` _ \ / _` | '__| __| |_ / _` |/ __/ _ \     | |/ _ \ 
-     ___) | | | | | | (_| | |  | |_|  _| (_| | (_|  __/  _  | | (_) |
-    |____/|_| |_| |_|\__,_|_|   \__|_|  \__,_|\___\___| (_) |_|\___/ 
-    -----------------------------------------------------------------
+## KeyboardLayout : <code>Class</code>
+Provides a component for iOS that goes at the top of a keyboard when focused on a TextBox
+Number-only keyboard on iOS does not have a ActionKey on it, therefore it is recommended to use this component for ease of usage.
+This component is not supported on Android.
 
+**Author**: Furkan Arabacı <furkan.arabaci@smartface.io>  
+**Copyright**: Smartface 2019  
 
-Hey fellow developer, thank you for using Smartface Cloud!
+* [KeyboardLayout](#module_KeyboardLayout) : <code>Class</code>
+    * _static_
+        * [.init(textBoxes)](#module_KeyboardLayout.init) ⇒ <code>Array.&lt;Object&gt;</code>
+    * _inner_
+        * [~KeyboardLayout](#module_KeyboardLayout..KeyboardLayout)
+        * [~toggleVisibilityofUpImage(disabled)](#module_KeyboardLayout..toggleVisibilityofUpImage)
+        * [~toggleVisibilityofDownImage(disabled)](#module_KeyboardLayout..toggleVisibilityofDownImage)
+        * [~toggleVisibilityOfUpImage(visible)](#module_KeyboardLayout..toggleVisibilityOfUpImage)
+        * [~toggleVisibilityOfDownImage(visible)](#module_KeyboardLayout..toggleVisibilityOfDownImage)
+        * [~toggleVisibilityOfDoneButton(visible)](#module_KeyboardLayout..toggleVisibilityOfDoneButton)
 
-Developing native apps for iOS and Android is as easy as a few lines of
-JavaScript code.
+<a name="module_KeyboardLayout.init"></a>
 
-Start coding right away and to view your app instantly on a real device,
-just click the Run on Device button and follow the instructions.
+### KeyboardLayout.init(textBoxes) ⇒ <code>Array.&lt;Object&gt;</code>
+Initializes a keyboard layout for each given textbox or material textbox
+When given one textBox, up and down buttons will be disabled by default.
 
-You can also update your native apps remotely and manage their lifecycle
-end-to-end, fully in the cloud.
+**Kind**: static method of [<code>KeyboardLayout</code>](#module_KeyboardLayout)  
+**Returns**: <code>Array.&lt;Object&gt;</code> - - Keyboard layouts as an order of textboxes given initially  
+**Access**: public  
 
-Welcome to the world of mobility!
-Smartface Team.
+| Param | Type | Description |
+| --- | --- | --- |
+| textBoxes | <code>Array.&lt;Object&gt;</code> \| <code>Object</code> | Array of or single textBox instance |
 
-## Support & Documentation & Useful Links
+<a name="module_KeyboardLayout..KeyboardLayout"></a>
 
-- [Guides](https://developer.smartface.io)
-- [API Docs](http://ref.smartface.io)
-- [Smartface Cloud Dashboard](https://cloud.smartface.io)
-- [Download Smartface On-Device Emulator](https://smf.to/app) (Works only from your device)
+### KeyboardLayout~KeyboardLayout
+**Kind**: inner class of [<code>KeyboardLayout</code>](#module_KeyboardLayout)  
+<a name="module_KeyboardLayout..toggleVisibilityofUpImage"></a>
+
+### KeyboardLayout~toggleVisibilityofUpImage(disabled)
+Sets disability of up image. When given true, it will gray out the layout.
+
+**Kind**: inner method of [<code>KeyboardLayout</code>](#module_KeyboardLayout)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| disabled | <code>boolean</code> | Pushes .disabled class to the layout, grays out by default |
+
+<a name="module_KeyboardLayout..toggleVisibilityofDownImage"></a>
+
+### KeyboardLayout~toggleVisibilityofDownImage(disabled)
+Sets disability of down image. When given true, it will gray out the layout.
+
+**Kind**: inner method of [<code>KeyboardLayout</code>](#module_KeyboardLayout)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| disabled | <code>boolean</code> | Pushes .disabled class to the layout, grays out by default |
+
+<a name="module_KeyboardLayout..toggleVisibilityOfUpImage"></a>
+
+### KeyboardLayout~toggleVisibilityOfUpImage(visible)
+Sets visibility of up image
+
+**Kind**: inner method of [<code>KeyboardLayout</code>](#module_KeyboardLayout)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| visible | <code>boolean</code> | Toggles visibility |
+
+<a name="module_KeyboardLayout..toggleVisibilityOfDownImage"></a>
+
+### KeyboardLayout~toggleVisibilityOfDownImage(visible)
+Sets visibility of down image
+
+**Kind**: inner method of [<code>KeyboardLayout</code>](#module_KeyboardLayout)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| visible | <code>boolean</code> | Toggles visibility |
+
+<a name="module_KeyboardLayout..toggleVisibilityOfDoneButton"></a>
+
+### KeyboardLayout~toggleVisibilityOfDoneButton(visible)
+Sets visibility of done button
+
+**Kind**: inner method of [<code>KeyboardLayout</code>](#module_KeyboardLayout)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| visible | <code>boolean</code> | Toggles visibility |
+
