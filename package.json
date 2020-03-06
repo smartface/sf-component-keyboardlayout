@@ -1,11 +1,14 @@
 {
-  "dependencies": {
-    "@smartface/smartface.ui-editor": "6.15.1"
-  },
-  "marketplace-assets": {
-    "materialtextbox": "1.3.7"
-  },
-  "devDependencies": {
-    "jsdoc-to-markdown": "^5.0.3"
-  }
+    "name": "keyboardlayout",
+    "description": "A template keyboard layout for iOS for ease of usage",
+    "version": "1.0.2",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "sfMarketplaceService import library --packageFolder $(pwd) --wsPath $SMF_CIDE_WS_PATH"
+    },
+    "author": "",
+    "license": "ISC"
 }
