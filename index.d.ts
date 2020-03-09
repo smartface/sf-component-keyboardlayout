@@ -5,7 +5,7 @@ export = boardLayout;
 
 declare type KeyboardLayout = any;
 declare class boardLayout extends FlexLayout {
-  init: (textBoxes: Array<TextBox> | TextBox) => Array<KeyboardLayout>;
+  static init: (textBoxes: Array<TextBox> | TextBox) => Array<KeyboardLayout>;
   btnDone: Button;
   textBox: TextBox;
   toggleDisabilityofUpImage: (disabled: boolean) => void;
