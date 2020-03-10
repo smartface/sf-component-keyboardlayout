@@ -11,7 +11,6 @@ const pushClassNames = require("@smartface/contx/lib/styling/action/pushClassNam
 const System = require("sf-core/device/system");
 const Application = require("sf-core/application");
 const TextBox = require("sf-core/ui/textbox");
-const extend = require('js-base/core/extend');
 const KeyboardLayoutDesign = require('../lib/KeyboardLayout');
 const Screen = require("sf-core/device/screen");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch");
@@ -28,53 +27,53 @@ const touch = require("sf-extension-utils/lib/touch");
  *     KeyboardLayout.init([textBox1, textBox2, textBox3]);
  * }
  */
-const KeyboardLayout = extend(KeyboardLayoutDesign)(
-    function(_super, props = {}, pageName) {
-        _super(this, props);
-        this.pageName = pageName;
-        this.textBox = {};
-        this.toggleDisabilityofUpImage = toggleDisabilityofUpImage.bind(this);
-        this.toggleVisibilityOfUpImage = toggleVisibilityOfUpImage.bind(this);
-        this.toggleDisabilityofDownImage = toggleDisabilityofDownImage.bind(this);
-        this.toggleVisibilityOfDownImage = toggleVisibilityOfDownImage.bind(this);
-        this.toggleVisibilityOfDoneButton = toggleVisibilityOfDoneButton.bind(this);
-        
-        this.btnDone.text = global.lang.done;
-        
-        let _onUpImageClick = () => {};
-        let _onDownImageClick = () => {};
-        let _onDoneButtonClick = () => {};
-        Object.defineProperties(this, {
-            onUpImageClick: {
-                set: value => {
-                    if (typeof value === "function") {
-                        touch.addPressEvent(this.imgUp, value);
-                        _onUpImageClick = value;
-                    }
-                },
-                get: () => _onUpImageClick
+
+KeyboardLayout.prototype = Object.create(KeyboardLayoutDesign.prototype);
+function KeyboardLayout(props = {}, pageName){
+    KeyboardLayoutDesign.call(this, props);
+    this.pageName = pageName;
+    this.textBox = {};
+    this.toggleDisabilityofUpImage = toggleDisabilityofUpImage.bind(this);
+    this.toggleVisibilityOfUpImage = toggleVisibilityOfUpImage.bind(this);
+    this.toggleDisabilityofDownImage = toggleDisabilityofDownImage.bind(this);
+    this.toggleVisibilityOfDownImage = toggleVisibilityOfDownImage.bind(this);
+    this.toggleVisibilityOfDoneButton = toggleVisibilityOfDoneButton.bind(this);
+    
+    this.btnDone.text = global.lang.done;
+    
+    let _onUpImageClick = () => {};
+    let _onDownImageClick = () => {};
+    let _onDoneButtonClick = () => {};
+    Object.defineProperties(this, {
+        onUpImageClick: {
+            set: value => {
+                if (typeof value === "function") {
+                    touch.addPressEvent(this.imgUp, value);
+                    _onUpImageClick = value;
+                }
             },
-            onDownImageClick: {
-                set: value => {
-                    if (typeof value === "function") {
-                        touch.addPressEvent(this.imgDown, value);
-                        _onDownImageClick = value;
-                    }
-                },
-                get: () => _onDownImageClick
+            get: () => _onUpImageClick
+        },
+        onDownImageClick: {
+            set: value => {
+                if (typeof value === "function") {
+                    touch.addPressEvent(this.imgDown, value);
+                    _onDownImageClick = value;
+                }
             },
-            onDoneButtonClick: {
-                set: value => {
-                    if (typeof value === "function") {
-                        touch.addPressEvent(this.btnDone, value);
-                        _onDoneButtonClick = value;
-                    }
-                },
-                get: () => _onDoneButtonClick
-            }
-        });
-    }
-);
+            get: () => _onDownImageClick
+        },
+        onDoneButtonClick: {
+            set: value => {
+                if (typeof value === "function") {
+                    touch.addPressEvent(this.btnDone, value);
+                    _onDoneButtonClick = value;
+                }
+            },
+            get: () => _onDoneButtonClick
+        }
+    });
+}
 
 /**
  * Initializes a keyboard layout for each given textbox or material textbox
