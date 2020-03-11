@@ -27,9 +27,16 @@ const touch = require("sf-extension-utils/lib/touch");
  *     KeyboardLayout.init([textBox1, textBox2, textBox3]);
  * }
  */
+function inheritFrom(base, sub) {
+    const statics = Object.assign({}, base, sub);
+    Object.assign(sub, statics);
+    sub.prototype = Object.create(base.prototype);
+    sub.prototype.constructor = sub;
+}
+inheritFrom(KeyboardLayout, KeyboardLayoutDesign);
 
 KeyboardLayout.prototype = Object.create(KeyboardLayoutDesign.prototype);
-function KeyboardLayout(props = {}, pageName){
+function KeyboardLayout(props = {}, pageName) {
     KeyboardLayoutDesign.call(this, props);
     this.pageName = pageName;
     this.textBox = {};
@@ -38,12 +45,12 @@ function KeyboardLayout(props = {}, pageName){
     this.toggleDisabilityofDownImage = toggleDisabilityofDownImage.bind(this);
     this.toggleVisibilityOfDownImage = toggleVisibilityOfDownImage.bind(this);
     this.toggleVisibilityOfDoneButton = toggleVisibilityOfDoneButton.bind(this);
-    
+
     this.btnDone.text = global.lang.done;
-    
-    let _onUpImageClick = () => {};
-    let _onDownImageClick = () => {};
-    let _onDoneButtonClick = () => {};
+
+    let _onUpImageClick = () => { };
+    let _onDownImageClick = () => { };
+    let _onDoneButtonClick = () => { };
     Object.defineProperties(this, {
         onUpImageClick: {
             set: value => {
@@ -100,6 +107,12 @@ KeyboardLayout.init = (textBoxes = []) => {
                     width: Screen.width
                 }
             });
+            // keyboardLayout.dispatch(pushClassNames([".keyboardLayout"]));
+            // keyboardLayout.flNavigation.dispatch(pushClassNames([".keyboardLayout-navigation"]));
+            // keyboardLayout.imgDown.dispatch(pushClassNames([".keyboardLayout-image.down"]));
+            // keyboardLayout.imgUp.dispatch(pushClassNames([".keyboardLayout-image.up"]));
+            // keyboardLayout.btnDone.dispatch(pushClassNames([".keyboardLayout-button"]));
+
             keyboardLayout.textBox = textBox;
             textBox.ios.keyboardLayout = keyboardLayout;
             currentLayouts.push(keyboardLayout);
