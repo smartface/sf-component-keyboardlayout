@@ -107,11 +107,13 @@ KeyboardLayout.init = (textBoxes = []) => {
                     width: Screen.width
                 }
             });
-            // keyboardLayout.dispatch(pushClassNames([".keyboardLayout"]));
-            // keyboardLayout.flNavigation.dispatch(pushClassNames([".keyboardLayout-navigation"]));
-            // keyboardLayout.imgDown.dispatch(pushClassNames([".keyboardLayout-image.down"]));
-            // keyboardLayout.imgUp.dispatch(pushClassNames([".keyboardLayout-image.up"]));
-            // keyboardLayout.btnDone.dispatch(pushClassNames([".keyboardLayout-button"]));
+            // Workaround for styles not being applied
+            keyboardLayout.dispatch(pushClassNames([".keyboardLayout"]));
+            keyboardLayout.flNavigation.dispatch(pushClassNames([".keyboardLayout-navigation"]));
+            keyboardLayout.imgDown.dispatch(pushClassNames([".keyboardLayout-image.down"]));
+            keyboardLayout.imgUp.dispatch(pushClassNames([".keyboardLayout-image.up"]));
+            keyboardLayout.btnDone.dispatch(pushClassNames([".keyboardLayout-button"]));
+            // End of workaround
 
             keyboardLayout.textBox = textBox;
             textBox.ios.keyboardLayout = keyboardLayout;
