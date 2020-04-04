@@ -97,10 +97,10 @@ KeyboardLayout.init = (textBoxes = []) => {
     }
     const currentTextBoxes = Array.isArray(textBoxes) ? textBoxes : [textBoxes];
     const currentLayouts = [];
-    currentTextBoxes.forEach((textBox) => {
+    currentTextBoxes.forEach((textBox, index) => {
         if (textBox instanceof TextBox) {
             const keyboardLayout = new KeyboardLayout();
-            componentContextPatch(keyboardLayout, `keyboardLayout${guid()}`);
+            componentContextPatch(keyboardLayout, `keyboardLayout${index}`);
             keyboardLayout.dispatch({
                 type: "updateUserStyle",
                 userStyle: {
