@@ -1,3 +1,12 @@
+# Smartface KeyboardLayout Component
+
+[![Npm Status](https://img.shields.io/npm/v/keyboardlayout/latest?registry_uri=https%3A%2F%2Fcd.smartface.io%2Frepository%2Fsmartfacenpmpublic%2F)]()
+
+## Installation
+```shell
+(cd ~/workspace/scripts && npm i keyboardlayout)
+```
+
 <a name="module_KeyboardLayout"></a>
 
 ## KeyboardLayout : <code>Class</code>
