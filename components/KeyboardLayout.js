@@ -14,7 +14,6 @@ const TextBox = require("sf-core/ui/textbox");
 const KeyboardLayoutDesign = require('../lib/KeyboardLayout');
 const Screen = require("sf-core/device/screen");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch");
-const guid = require("sf-extension-utils/lib/guid");
 const touch = require("sf-extension-utils/lib/touch");
 
 /**
@@ -90,11 +89,9 @@ function KeyboardLayout(props = {}, pageName) {
  * @param {Object[]|Object} textBoxes - Array of or single textBox instance
  * @returns {Object[]} - Keyboard layouts as an order of textboxes given initially
  * @public
+ * @iOS
  */
 KeyboardLayout.init = (textBoxes = []) => {
-    if (System.OS === "Android") {
-        return;
-    }
     const currentTextBoxes = Array.isArray(textBoxes) ? textBoxes : [textBoxes];
     const currentLayouts = [];
     currentTextBoxes.forEach((textBox, index) => {
@@ -116,7 +113,9 @@ KeyboardLayout.init = (textBoxes = []) => {
             // End of workaround
 
             keyboardLayout.textBox = textBox;
-            textBox.ios.keyboardLayout = keyboardLayout;
+            if (System.OS === "iOS") {
+                textBox.ios.keyboardLayout = keyboardLayout;
+            }
             currentLayouts.push(keyboardLayout);
         }
     });
