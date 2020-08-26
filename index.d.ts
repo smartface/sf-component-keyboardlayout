@@ -1,10 +1,8 @@
 import FlexLayout = require('sf-core/ui/flexLayout');
 import TextBox = require('sf-core/ui/textbox');
 import Button = require('sf-core/ui/button');
-export = boardLayout;
 
-declare type KeyboardLayout = any;
-declare class boardLayout extends FlexLayout {
+export default class KeyboardLayout extends FlexLayout {
   static init: (textBoxes: Array<TextBox> | TextBox) => Array<KeyboardLayout>;
   btnDone: Button;
   textBox: TextBox;
