@@ -1,9 +1,11 @@
 {
-    "name": "keyboardlayout",
+    "name": "@smartface/keyboardlayout",
     "description": "A template keyboard layout for iOS for ease of usage",
     "version": "2.0.1",
     "main": "index.js",
-    "dependencies": {},
+    "dependencies": {
+        "@smartface/contx": "^3.0.1"
+    },
     "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
