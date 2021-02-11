@@ -1,7 +1,7 @@
 {
     "name": "@smartface/keyboardlayout",
     "description": "A template keyboard layout for iOS for ease of usage",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "main": "index.js",
     "dependencies": {
         "@smartface/contx": "^3.0.1"
