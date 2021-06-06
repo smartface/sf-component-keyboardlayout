@@ -1,16 +1,21 @@
 {
-    "name": "keyboardlayout",
+    "name": "@smartface/component-keyboardlayout",
     "description": "A template keyboard layout for iOS for ease of usage",
     "version": "2.0.7",
     "main": "index.js",
     "dependencies": {
         "@smartface/contx": "^3.0.1"
     },
-    "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "postinstall": "if [[ `${AC_APPCIRCLE}` != `true` ]]; then sfMarketplaceService import library --packageFolder $(pwd) --wsPath $SMF_CIDE_WS_PATH else true; fi;"
     },
-    "author": "",
-    "license": "ISC"
+    "author": {
+        "email": "info@smartface.io",
+        "name": "Smartface Inc."
+    },
+    "license": "MIT",
+    "peerDependencies": {
+        "@smartface/native": "^4.0.0"
+    }
 }
