@@ -1,6 +1,6 @@
-import FlexLayout = require('@smartface/native/ui/flexLayout');
-import TextBox = require('@smartface/native/ui/textbox');
-import Button = require('@smartface/native/ui/button');
+import FlexLayout from '@smartface/native/ui/flexLayout';
+import TextBox from '@smartface/native/ui/textbox';
+import Button from '@smartface/native/ui/button';
 
 export default class KeyboardLayout extends FlexLayout {
   static init: (textBoxes: Array<TextBox> | TextBox) => Array<KeyboardLayout>;

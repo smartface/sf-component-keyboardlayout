@@ -14,7 +14,7 @@ const TextBox = require("@smartface/native/ui/textbox");
 const KeyboardLayoutDesign = require('../lib/KeyboardLayout');
 const Screen = require("@smartface/native/device/screen");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch").default;
-const touch = require("sf-extension-utils/lib/touch");
+const touch = require("@smartface/extension-utils/lib/touch");
 
 /**
  * @class
