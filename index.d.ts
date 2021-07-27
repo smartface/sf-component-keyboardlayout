@@ -1,6 +1,6 @@
-import FlexLayout = require('sf-core/ui/flexLayout');
-import TextBox = require('sf-core/ui/textbox');
-import Button = require('sf-core/ui/button');
+import FlexLayout from '@smartface/native/ui/flexLayout';
+import TextBox from '@smartface/native/ui/textbox';
+import Button from '@smartface/native/ui/button';
 
 export default class KeyboardLayout extends FlexLayout {
   static init: (textBoxes: Array<TextBox> | TextBox) => Array<KeyboardLayout>;

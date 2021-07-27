@@ -8,13 +8,13 @@
  * @copyright Smartface 2020
  */
 const pushClassNames = require("@smartface/contx/lib/styling/action/pushClassNames").default;
-const System = require("sf-core/device/system");
-const Application = require("sf-core/application");
-const TextBox = require("sf-core/ui/textbox");
+const System = require("@smartface/native/device/system");
+const Application = require("@smartface/native/application");
+const TextBox = require("@smartface/native/ui/textbox");
 const KeyboardLayoutDesign = require('../lib/KeyboardLayout');
-const Screen = require("sf-core/device/screen");
+const Screen = require("@smartface/native/device/screen");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch").default;
-const touch = require("sf-extension-utils/lib/touch");
+const touch = require("@smartface/extension-utils/lib/touch");
 
 /**
  * @class
