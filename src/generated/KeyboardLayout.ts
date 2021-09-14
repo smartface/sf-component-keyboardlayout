@@ -6,9 +6,9 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 //
 //------------------------------------------------------------------------------
-import { Styleable } from 'generated/core/Styleable';
+import { Styleable } from './core/Styleable';
 import View = require('@smartface/native/ui/view');
-import { ComponentStyleContext } from 'generated/core/ComponentStyleContext';
+import { ComponentStyleContext } from './core/ComponentStyleContext';
 import System = require('@smartface/native/device/system');
 
 import FlexLayout = require('@smartface/native/ui/flexlayout');
@@ -16,7 +16,7 @@ import ImageView = require('@smartface/native/ui/imageview');
 import Button = require('@smartface/native/ui/button');
 
 export default class Keyboardlayout extends FlexLayout implements Styleable {
-	dispatch: (action: { [key: string]: any }) => void;
+	dispatch: (action: { [key: string]: any }) => void = () => {};
 	children: { [key: string]: any } = {};
 	static $$styleContext: ComponentStyleContext = {
 		classNames: '.keyboardLayout',
@@ -26,6 +26,7 @@ export default class Keyboardlayout extends FlexLayout implements Styleable {
 	imgUp: StyleContextComponentType<$Keyboardlayout$$FlNavigation$$ImgUp>;
 	imgDown: StyleContextComponentType<$Keyboardlayout$$FlNavigation$$ImgDown>;
 	btnDone: StyleContextComponentType<$Keyboardlayout$$BtnDone>;
+	flNavigation: StyleContextComponentType<$Keyboardlayout$$FlNavigation>;
 	constructor(props?: ConstructorParameters<typeof FlexLayout>) {
 		super();
 
@@ -34,22 +35,20 @@ export default class Keyboardlayout extends FlexLayout implements Styleable {
 		this.imgUp = this.children.flNavigation.children.imgUp;
 		this.imgDown = this.children.flNavigation.children.imgDown;
 		this.btnDone = this.children.btnDone;
+		this.flNavigation = this.children.flNavigation;
 	}
 	addChildByName(child: View, name: string) {
 		this.children[name] = child;
 		this.addChild(child);
 	}
 	addChild(child: View, name?: string, classNames?: string, userProps?: { [key: string]: any }, defaultClassNames?: string): void {
-		if (this['layout']) {
-			this['layout'].addChild(child);
-		} else {
-			super.addChild(child);
-		}
+		super.addChild(child);
+
 	}
 }
 
 class $Keyboardlayout$$FlNavigation extends FlexLayout implements Styleable {
-	dispatch: (action: { [key: string]: any }) => void;
+	dispatch: (action: { [key: string]: any }) => void = () => {};
 	children: { [key: string]: any } = {};
 	static $$styleContext: ComponentStyleContext = {
 		classNames: '.keyboardLayout-navigation',
@@ -64,15 +63,11 @@ class $Keyboardlayout$$FlNavigation extends FlexLayout implements Styleable {
 	}
 	addChildByName(child: View, name: string) {
 		this.children[name] = child;
-		if (this['layout']) {
-			this['layout'].addChild(child);
-		} else {
-			this.addChild(child);
-		}
+		this.addChild(child);
 	}
 }
 class $Keyboardlayout$$FlNavigation$$ImgUp extends ImageView implements Styleable {
-	dispatch: (action: { [key: string]: any }) => void;
+	dispatch: (action: { [key: string]: any }) => void = () => {};
 	static $$styleContext: ComponentStyleContext = {
 		classNames: '.keyboardLayout-image.up',
 		defaultClassNames: '.default_common .default_imageView',
@@ -84,7 +79,7 @@ class $Keyboardlayout$$FlNavigation$$ImgUp extends ImageView implements Styleabl
 }
 
 class $Keyboardlayout$$FlNavigation$$ImgDown extends ImageView implements Styleable {
-	dispatch: (action: { [key: string]: any }) => void;
+	dispatch: (action: { [key: string]: any }) => void = () => {};
 	static $$styleContext: ComponentStyleContext = {
 		classNames: '.keyboardLayout-image.down',
 		defaultClassNames: '.default_common .default_imageView',
@@ -96,7 +91,7 @@ class $Keyboardlayout$$FlNavigation$$ImgDown extends ImageView implements Stylea
 }
 
 class $Keyboardlayout$$BtnDone extends Button implements Styleable {
-	dispatch: (action: { [key: string]: any }) => void;
+	dispatch: (action: { [key: string]: any }) => void = () => {};
 	static $$styleContext: ComponentStyleContext = {
 		classNames: '.keyboardLayout-button',
 		defaultClassNames: '.default_common .default_button',

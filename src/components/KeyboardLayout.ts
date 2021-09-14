@@ -5,13 +5,11 @@ import System from "@smartface/native/device/system";
 import TextBox from "@smartface/native/ui/textbox";
 import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
 import touch from "@smartface/extension-utils/lib/touch";
-import KeyboardLayoutDesign from "../lib/KeyboardLayout";
+import KeyboardLayoutDesign from "../generated/KeyboardLayout";
 import FlexLayout from "@smartface/native/ui/flexlayout";
-import Button from "@smartface/native/ui/button";
 
 export default class KeyboardLayout extends KeyboardLayoutDesign {
-    btnDone: Button;
-    textBox: TextBox;
+    textBox?: TextBox;
     private _onUpImageClick: any;
     private _onDownImageClick: any;
     private _onDoneButtonClick: any;
@@ -159,10 +157,10 @@ function setDefaultActions(keyboardLayouts: Array<KeyboardLayout> = []) {
     keyboardLayouts.forEach((keyboardLayout, index) => {
         keyboardLayout.onDoneButtonClick = () => {
             Application.hideKeyboard();
-            keyboardLayout.textBox.removeFocus();
+            keyboardLayout.textBox?.removeFocus();
         };
-        keyboardLayout.onUpImageClick = () => keyboardLayouts[index - 1] && keyboardLayouts[index - 1].textBox.requestFocus();
-        keyboardLayout.onDownImageClick = () => keyboardLayouts[index + 1] && keyboardLayouts[index + 1].textBox.requestFocus();
+        keyboardLayout.onUpImageClick = () => keyboardLayouts[index - 1] && keyboardLayouts[index - 1].textBox?.requestFocus();
+        keyboardLayout.onDownImageClick = () => keyboardLayouts[index + 1] && keyboardLayouts[index + 1].textBox?.requestFocus();
         keyboardLayout.toggleDisabilityofUpImage(index === 0);
         keyboardLayout.toggleDisabilityofDownImage(index === keyboardLayouts.length - 1);
         keyboardLayout.toggleVisibilityOfDownImage(keyboardLayouts.length !== 1);
