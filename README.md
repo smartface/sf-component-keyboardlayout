@@ -1,11 +1,11 @@
 # Smartface KeyboardLayout Component
 
-[![Npm Status](https://img.shields.io/npm/v/keyboardlayout/latest?registry_uri=https%3A%2F%2Fcd.smartface.io%2Frepository%2Fsmartfacenpmpublic%2F)]()
+[![NPM](https://img.shields.io/npm/v/@smartface/component-keyboardlayout?style=flat-square)](https://www.npmjs.com/package/@smartface/component-keyboardlayout)
 
 ## Installation
 Execute the command on the scripts directory
 ```shell
-npm i @smartface/component-keyboardlayout
+yarn i @smartface/component-keyboardlayout
 ```
 
 <a name="module_KeyboardLayout"></a>
