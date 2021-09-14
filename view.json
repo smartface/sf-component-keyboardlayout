@@ -29,13 +29,16 @@
 					"6fdc-df16-7d30-6aec"
 				],
 				"name": "flNavigation",
-				"parent": "ce17-847e-9acd-19e8"
+				"parent": "ce17-847e-9acd-19e8",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
 			},
 			"type": "FlexLayout",
-			"userProps": {}
+			"userProps": {
+				"usePageVariable": true
+			}
 		},
 		{
 			"className": ".keyboardLayout-image.up",
