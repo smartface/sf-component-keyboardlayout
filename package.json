@@ -1,7 +1,7 @@
 {
     "name": "@smartface/component-keyboardlayout",
     "description": "A template keyboard layout for iOS for ease of usage",
-    "version": "4.0.2",
+    "version": "5.0.0",
     "main": "dist/index.js",
     "scripts": {
         "postinstall": "node postinstall.js",
