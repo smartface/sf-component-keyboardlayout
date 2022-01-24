@@ -1,12 +1,13 @@
-import pushClassNames from "@smartface/contx/lib/styling/action/pushClassNames";
 import Application from "@smartface/native/application";
 import Screen from "@smartface/native/device/screen";
 import System from "@smartface/native/device/system";
 import TextBox from "@smartface/native/ui/textbox";
-import componentContextPatch from "@smartface/contx/lib/smartface/componentContextPatch";
-import touch from "@smartface/extension-utils/lib/touch";
 import KeyboardLayoutDesign from "../generated/KeyboardLayout";
 import FlexLayout from "@smartface/native/ui/flexlayout";
+import ImageView from "@smartface/native/ui/imageview";
+import Button from "@smartface/native/ui/button";
+import { ThemeService } from '@smartface/styling-context/lib/ThemeService';
+import createPageContext from '@smartface/styling-context/lib/pageContext';
 
 export default class KeyboardLayout extends KeyboardLayoutDesign {
     textBox?: TextBox;
@@ -24,7 +25,7 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
     }
 
     set onUpImageClick(value: () => void) {
-        touch.addPressEvent(this.imgUp, value);
+        this.imgUp.on(ImageView.Events.TouchEnded, value);
         this._onUpImageClick = value;
     }
 
@@ -33,7 +34,7 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
     }
 
     set onDownImageClick(value: () => void) {
-        touch.addPressEvent(this.imgDown, value);
+        this.imgDown.on(ImageView.Events.TouchEnded, value);
         this._onDownImageClick = value;
     }
 
@@ -42,7 +43,7 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
     }
 
     set onDoneButtonClick(value: () => void) {
-        touch.addPressEvent(this.btnDone, value);
+        this.btnDone.on(Button.Events.Press, value);
         this._onDoneButtonClick = value;
     }
 
@@ -55,7 +56,10 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
     toggleDisabilityofUpImage = (disabled = false) => {
         const component = this;
         const disabledClassText = disabled ? ".disabled" : "";
-        component.imgUp.dispatch(pushClassNames(`.keyboardLayout-image.up${disabledClassText}`));
+        component.imgUp.dispatch?.({
+            type: "pushClassNames",
+            classNames: [`.keyboardLayout-image.up${disabledClassText}`]
+        });
     }
 
     /**
@@ -67,7 +71,11 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
     toggleDisabilityofDownImage = (disabled = false) => {
         const component = this;
         const disabledClassText = disabled ? ".disabled" : "";
-        component.imgDown.dispatch(pushClassNames(`.keyboardLayout-image.down${disabledClassText}`));
+
+        component.imgDown.dispatch?.({
+            type: "pushClassNames",
+            classNames: [`.keyboardLayout-image.down${disabledClassText}`]
+        });
     }
 
     /**
@@ -78,7 +86,7 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
      */
     toggleVisibilityOfUpImage = (visible = true) => {
         const component = this;
-        component.imgUp.dispatch({
+        component.imgUp.dispatch?.({
             type: "updateUserStyle",
             userStyle: {
                 visible
@@ -94,7 +102,7 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
      */
     toggleVisibilityOfDownImage = (visible = true) => {
         const component = this;
-        component.imgDown.dispatch({
+        component.imgDown.dispatch?.({
             type: "updateUserStyle",
             userStyle: {
                 visible
@@ -110,7 +118,7 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
      */
     toggleVisibilityOfDoneButton = (visible = true) => {
         const component = this;
-        component.btnDone.dispatch({
+        component.btnDone.dispatch?.({
             type: "updateUserStyle",
             userStyle: {
                 visible
@@ -124,23 +132,39 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
         currentTextBoxes.forEach((textBox, index) => {
             if (textBox instanceof TextBox) {
                 const keyboardLayout = new KeyboardLayout();
-                componentContextPatch(keyboardLayout, `keyboardLayout${index}`);
-                keyboardLayout.dispatch({
+                ThemeService.instance.addPage(createPageContext(keyboardLayout, `keyboardLayout${index}`), `keyboardLayout${index}`);
+                keyboardLayout.dispatch?.({
                     type: "updateUserStyle",
                     userStyle: {
                         width: Screen.width
                     }
                 });
-                // Workaround for styles not being applied
-                keyboardLayout.dispatch(pushClassNames([".keyboardLayout"]));
-                keyboardLayout.flNavigation.dispatch(pushClassNames([".keyboardLayout-navigation"]));
-                keyboardLayout.imgDown.dispatch(pushClassNames([".keyboardLayout-image.down"]));
-                keyboardLayout.imgUp.dispatch(pushClassNames([".keyboardLayout-image.up"]));
-                keyboardLayout.btnDone.dispatch(pushClassNames([".keyboardLayout-button"]));
-                // End of workaround
+
+                ////#region Workaround for styles not being applied
+                keyboardLayout.dispatch?.({
+                    type: "pushClassNames",
+                    classNames: [".keyboardLayout"]
+                });
+                keyboardLayout.flNavigation.dispatch?.({
+                    type: "pushClassNames",
+                    classNames: [".keyboardLayout-navigation"]
+                });
+                keyboardLayout.imgDown.dispatch?.({
+                    type: "pushClassNames",
+                    classNames: [".keyboardLayout-image.down"]
+                });
+                keyboardLayout.imgUp.dispatch?.({
+                    type: "pushClassNames",
+                    classNames: [".keyboardLayout-image.up"]
+                });
+                keyboardLayout.btnDone.dispatch?.({
+                    type: "pushClassNames",
+                    classNames: [".keyboardLayout-button"]
+                });
+                ////#endregionEnd of workaround
     
                 keyboardLayout.textBox = textBox;
-                if (System.OS === "iOS") {
+                if (System.OS === System.OSType.IOS) {
                     textBox.ios.keyboardLayout = keyboardLayout;
                 }
                 currentLayouts.push(keyboardLayout);
