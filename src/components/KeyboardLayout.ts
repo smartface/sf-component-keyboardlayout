@@ -14,10 +14,20 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
     private _onUpImageClick: any;
     private _onDownImageClick: any;
     private _onDoneButtonClick: any;
+    private _doneText = "DONE";
 
     constructor(props?: ConstructorParameters<typeof FlexLayout>, pageName?: string) {
         super(props);
-        this.btnDone.text = global.lang.done;
+        this.btnDone.text = this._doneText;
+    }
+
+    get doneText(): string {
+        return this._doneText;
+    }
+
+    set doneText(value: string) {
+        this._doneText = value;
+        this.btnDone.text = this._doneText;
     }
 
     get onUpImageClick() {
@@ -126,12 +136,13 @@ export default class KeyboardLayout extends KeyboardLayoutDesign {
         });
     }
 
-    static init(textBoxes: Array<TextBox> | TextBox = []) {
+    static init(textBoxes: Array<TextBox> | TextBox = [], doneText?: string) {
         const currentTextBoxes = Array.isArray(textBoxes) ? textBoxes : [textBoxes];
         const currentLayouts: Array<KeyboardLayout> = [];
         currentTextBoxes.forEach((textBox, index) => {
             if (textBox instanceof TextBox) {
                 const keyboardLayout = new KeyboardLayout();
+                keyboardLayout.doneText = doneText;
                 ThemeService.instance.addPage(createPageContext(keyboardLayout, `keyboardLayout${index}`), `keyboardLayout${index}`);
                 keyboardLayout.dispatch?.({
                     type: "updateUserStyle",
