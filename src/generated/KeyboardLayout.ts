@@ -189,7 +189,6 @@ class $Keyboardlayout$$BtnDone extends styleableComponentMixin(Button) {
   };
   constructor(props?: any) {
     super({ text: "Done" });
-
     this.testId = "___library___Keyboardlayout_BtnDone";
   }
 }

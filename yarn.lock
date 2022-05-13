@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@smartface/contx@^4.2.0", "@smartface/contx@^4.2.2":
+"@smartface/contx@^4.2.0":
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@smartface/contx/-/contx-4.2.2.tgz#871407224732eb626773f4b95bfa2c8a88410d9f"
   integrity sha512-unFL/aItHkRXqlCaEAa9tb12GysF7YZsdPzYQqCY/O5QdnzlAI9wcxwXmAEx0PZZORSJsJRoVMMFSG7v+bIMYA==
@@ -35,10 +35,10 @@
     node-ipc "^9.1.1"
     recursive-readdir "^2.2.2"
 
-"@smartface/native@^4.3.6-beta":
-  version "4.3.6-beta.13"
-  resolved "https://registry.yarnpkg.com/@smartface/native/-/native-4.3.6-beta.13.tgz#2a6eba0a8e825f6c9f05ccbef1b2701a73d5d771"
-  integrity sha512-DDsYnhwQRvxSdDaItu+MgXyiyeeGPMKZg6zHeaN7xIjqQ0cAUFua4cijP0Bf9hhP0ZjvGcsBK1hg5Tr2Tli18Q==
+"@smartface/native@^5.0.0-alpha":
+  version "5.0.0-alpha.77"
+  resolved "https://registry.yarnpkg.com/@smartface/native/-/native-5.0.0-alpha.77.tgz#5ed336d9cdd338d07aab46dbb2504ad334cb45da"
+  integrity sha512-u5/H7je0BBZYK7e5140sQYDuXS/GvmZ0c66A8G6ClMUsnRm4hVfLjfpz1ozxRrNP0hBTup/59iYLU8mYDGPCXg==
   dependencies:
     events "^3.3.0"
 
@@ -47,10 +47,10 @@
   resolved "https://registry.yarnpkg.com/@smartface/styler/-/styler-2.0.0.tgz#4b6a127bad90e3a6daf50076e2b38e90eb17043a"
   integrity sha512-XLgoSUdXM8l0xHFIHV85ZEwzlYl07be2qi+Ca9p3lU1oE8STetxLFR3z7LD8eIq5Wp0Vzoh9xDsGdu0gTwo/dw==
 
-"@smartface/styling-context@^1.1.8":
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/@smartface/styling-context/-/styling-context-1.1.8.tgz#8201e4def0728c90ca51ae3da323c3b07ffd6098"
-  integrity sha512-SQnfEoT9rnBVlEP8yPFKNGTo54bV33zlqob+ipUtz3dQxao18HR+ih1vqiDSOw3k0w30RZEKmmc0NqTqXGVVAw==
+"@smartface/styling-context@^5.0.0-alpha":
+  version "5.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@smartface/styling-context/-/styling-context-5.0.0-alpha.9.tgz#aaae11c35c795b03eeb29f2c6faa3b2aa5d8e4f7"
+  integrity sha512-vMZ4hgWLseLRu1IIxd1RdSqYQjyHI+oXgg4lQTYQlHYw2nvyvybiQdLIT5OycoNZsmTWgBe5kh93/IqIPor1vw==
   dependencies:
     "@smartface/contx" "^4.2.0"
     "@smartface/styler" "^2.0.0"
